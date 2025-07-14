@@ -1,0 +1,11 @@
+[Unit]
+Description=GreyRhinoSec Stealth Xray C2 Proxy
+After=network.target
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/local/bin/xray -c /usr/local/etc/xray/client.json
+Restart=always
+RestartSec=3
+[Install]
+WantedBy=multi-user.target

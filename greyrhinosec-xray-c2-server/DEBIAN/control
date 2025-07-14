@@ -1,0 +1,7 @@
+Package: greyrhinosec-xray-c2-server
+Version: 1.0.0
+Section: net
+Priority: optional
+Architecture: amd64
+Maintainer: You <admin@greyrhinosec.com>
+Description: GreyRhinoSec Stealth Xray C2 Server (.deb). Systemd, hardened configs, nginx reverse proxy, HTTPS camouflage.

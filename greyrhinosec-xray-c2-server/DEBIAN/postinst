@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+systemctl daemon-reload
+systemctl enable xray
+systemctl enable nginx
+systemctl restart xray
+systemctl restart nginx

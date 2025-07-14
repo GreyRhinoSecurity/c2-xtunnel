@@ -1,0 +1,31 @@
+{
+  "inbounds": [{
+    "port": 10808,
+    "listen": "127.0.0.1",
+    "protocol": "socks",
+    "settings": { "auth": "noauth" }
+  }],
+  "outbounds": [{
+    "protocol": "vmess",
+    "settings": {
+      "vnext": [{
+        "address": "greyrhinosec.com",
+        "port": 443,
+        "users": [{
+          "id": "841829c6-45c9-4cf8-b287-fbea627026f8",
+          "alterId": 0
+        }]
+      }]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "security": "tls",
+      "tlsSettings": {
+        "serverName": "greyrhinosec.com"
+      },
+      "wsSettings": {
+        "path": "/cdn-b4e/"
+      }
+    }
+  }]
+}

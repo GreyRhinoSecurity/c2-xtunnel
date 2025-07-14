@@ -1,0 +1,24 @@
+{
+  "inbounds": [{
+    "port": 10000,
+    "protocol": "vmess",
+    "settings": {
+      "clients": [{
+        "id": "841829c6-45c9-4cf8-b287-fbea627026f8",
+        "alterId": 0
+      }]
+    },
+    "streamSettings": {
+      "network": "ws",
+      "wsSettings": {
+        "path": "/cdn-b4e/"
+      }
+    }
+  }],
+  "outbounds": [{
+    "protocol": "freedom",
+    "settings": {
+      "domainStrategy": "UseIPv4"
+    }
+  }]
+}

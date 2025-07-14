@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=GreyRhinoSec C2 Proxy
+Comment=Stealth WebSocket+TLS Tunnel with Watchdog
+Exec=systemctl status xray-client
+Terminal=true
+Type=Application
+Categories=Network;Security;
