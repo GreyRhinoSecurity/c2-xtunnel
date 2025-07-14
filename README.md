@@ -27,5 +27,6 @@ Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, an
 ## Quick Install
 
 ```sh
-sudo dpkg -i greyrhinosec-xray-c2-client_1.0.0_amd64.deb
+wget https://github.com/GreyRhinoSecurity/c2-xtunnel/releases/latest/download/greyrhinosec-xray-c2-client.deb
+sudo dpkg -i greyrhinosec-xray-c2-client.deb
 sudo systemctl enable --now xray-client
