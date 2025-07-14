@@ -39,3 +39,4 @@ sudo apt update
 sudo apt install curl cron
 # (server only)
 sudo apt install nginx certbot python3-certbot-nginx
+bash <(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)
