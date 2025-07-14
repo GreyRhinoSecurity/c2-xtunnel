@@ -10,33 +10,38 @@
 ## About
 
 **GreyRhinoSec Xray C2 XTunnel** is a stealth SOCKS5 proxy tunneling solution for red teams, operators, and security researchers.
-It leverages Xray-core’s VMess over WebSocket+TLS (HTTPS lookalike), with Nginx reverse proxy for maximum camouflage.  
-Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, and full custom branding.
+It uses Xray-core’s VMess over WebSocket+TLS (HTTPS lookalike), with Nginx reverse proxy for maximum camouflage.
+Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, pro docs, and full custom branding.
 
 ---
 
 ## Features
 
 - Stealth WebSocket+TLS (HTTPS-camouflaged) proxy tunnel
-- Systemd autostart for 24/7 ops
+- Systemd autostart (service always running)
 - Watchdog/failover healthcheck (cron, logs, auto-recovery)
 - Desktop launcher and custom icon
-- Easy `.deb` package install for instant deploy
-- **Branding ready:** icon, launcher, docs, banners
+- Easy `.deb` install for fast deploy
+- Full branding: icons, launchers, docs, banners
+- Modular repo: client, server, templates, advanced wiki
 
 ---
 
 ## Prerequisites
 
-- Debian, Ubuntu, Kali, or other modern Debian-based Linux
-- systemd, curl, cron (usually pre-installed)
-- [Xray-core binary](https://github.com/XTLS/Xray-core/releases) in `/usr/local/bin/xray`
-- (Server only) nginx and certbot for SSL proxy
+**Client & Server:**
+- Debian, Ubuntu, Kali, or other modern Debian-based Linux (systemd)
+- `curl`, `cron` (should already be installed)
+- [`xray-core` binary](https://github.com/XTLS/Xray-core/releases) in `/usr/local/bin/xray`
 
-### Install missing dependencies
+**Server only:**
+- `nginx` (for TLS reverse proxy)
+- `certbot` (for free Let's Encrypt SSL certificates)
+- A domain pointed to your server (e.g., `greyrhinosec.com`)
+
+**Install missing dependencies:**
 ```sh
 sudo apt update
 sudo apt install curl cron
 # (server only)
 sudo apt install nginx certbot python3-certbot-nginx
-bash <(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)
