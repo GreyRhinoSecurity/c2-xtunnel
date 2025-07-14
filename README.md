@@ -20,4 +20,4 @@ sudo dpkg -i xray-stealth-client_1.0_amd64.deb
 - Menu: GreyRhinoSec C2 Proxy
 
 ## Authors
-- You (elliot@greyrhinosec.com)
+- Github @greyrhinosec
