@@ -1,23 +1,31 @@
-# GreyRhinoSec Xray Stealth C2 Proxy
+# 🦏 GreyRhinoSec Xray Stealth C2 Proxy
+
+![Linux](https://img.shields.io/badge/Platform-Kali%20%7C%20Ubuntu-informational?logo=linux)
+![Debian package](https://img.shields.io/badge/Install-.deb-blue?logo=debian)
+![License: MIT](https://img.shields.io/badge/License-MIT-green)
+![Status](https://img.shields.io/badge/Status-Operational-brightgreen)
+
+## About
+
+**GreyRhinoSec Xray C2 XTunnel** is a stealth SOCKS5 proxy tunneling solution for red teams, operators, and security researchers.  
+It leverages Xray-core’s VMess over WebSocket+TLS (HTTPS lookalike), with Nginx reverse proxy for maximum camouflage.  
+Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, and full custom branding.
+
+---
 
 ## Features
-- Stealth VMess WebSocket+TLS proxy tunnel
-- Systemd autostart
-- Watchdog/failover healthcheck (cron)
-- Desktop launcher and icon
 
-## Install
-```
-sudo dpkg -i xray-stealth-client_1.0_amd64.deb
-```
+- Stealth WebSocket+TLS (HTTPS-camouflaged) proxy tunnel
+- Systemd autostart for 24/7 ops
+- Watchdog/failover healthcheck (cron, logs, auto-recovery)
+- Desktop launcher and custom icon
+- Easy `.deb` package install for instant deploy
+- **Branding ready:** icon, launcher, docs, and banners
 
-## Usage
-- Set your browser/CLI to use SOCKS5 proxy 127.0.0.1:10808
-- All traffic will tunnel via your Linode C2.
+---
 
-## Branding
-- Custom icon: /usr/share/pixmaps/greyrhinosec.png
-- Menu: GreyRhinoSec C2 Proxy
+## Quick Install
 
-## Authors
-- Github @greyrhinosec
+```sh
+sudo dpkg -i greyrhinosec-xray-c2-client_1.0.0_amd64.deb
+sudo systemctl enable --now xray-client
