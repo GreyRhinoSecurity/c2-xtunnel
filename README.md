@@ -30,6 +30,8 @@ Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, an
 wget https://github.com/GreyRhinoSecurity/c2-xtunnel/releases/latest/download/greyrhinosec-xray-c2-client.deb
 sudo dpkg -i greyrhinosec-xray-c2-client.deb
 sudo systemctl enable --now xray-client
+
+---
 ## Prerequisites
 
 - Debian, Ubuntu, Kali, or other modern Debian-based Linux
