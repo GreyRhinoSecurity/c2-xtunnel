@@ -30,3 +30,16 @@ Includes watchdog/failover healthcheck, systemd auto-start, desktop launcher, an
 wget https://github.com/GreyRhinoSecurity/c2-xtunnel/releases/latest/download/greyrhinosec-xray-c2-client.deb
 sudo dpkg -i greyrhinosec-xray-c2-client.deb
 sudo systemctl enable --now xray-client
+## Prerequisites
+
+- Debian, Ubuntu, Kali, or other modern Debian-based Linux
+- systemd, curl, cron installed (default on most systems)
+- [Xray-core binary](https://github.com/XTLS/Xray-core/releases) at `/usr/local/bin/xray`
+- (Server only) nginx and certbot for SSL proxy setup
+
+### Install missing dependencies:
+```sh
+sudo apt update
+sudo apt install curl cron
+# (server only)
+sudo apt install nginx certbot python3-certbot-nginx
